@@ -272,3 +272,7 @@ Analise Assintodica
 # 2024.1
 ## Aula 21/02
 - Conceitos iniciais sobre os tipos de dados e as formas para se organizar
+
+## Aula 28/02
+### Lista Encadeada
+São uma fila de Nodos, onde a gente pega um nodo inicial e vai incrementando na esquerda, no inicio. Na hora de ler temos que criar uma variavél auxiliar para conseguir mover o incio depois. Na hora de deletar temos que pegar o aux e receber o próximo do pŕoximo elemento, para que ele consiga romper o vincula com o próximo e vincular com o prox do prox.

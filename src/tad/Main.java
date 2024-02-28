@@ -9,6 +9,8 @@ public class Main {
 
         ValidarPrimo primoValidade = new ValidarPrimo(12);
         System.out.println(primoValidade.validar());
+        System.out.println();
 
     }
+
 }
