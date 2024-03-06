@@ -54,6 +54,62 @@ public class ListaEncadeada {
         }
     }
 
+    public void contarNodos() {
+        int countNodos = 1;
+        if (vazia()) {
+            System.out.println("Lista Vazia");
+            return;
+        }
+        Nodo aux = inicio;
+        while (aux.getProx() != null) {
+            countNodos++;
+            aux = aux.getProx();
+        }
+        System.out.println("Quantidade de Nodos: " + countNodos);
+
+    }
+
+    public void deletarPrimeiro() {
+        if (vazia()) {
+            return;
+        }
+        inicio = inicio.getProx();
+    }
+
+    public void deletarUltimo() {
+        if (vazia()) {
+            return;
+        }
+        if (inicio.getProx() == null) {
+            inicio = null;
+            return;
+        }
+        Nodo aux = inicio;
+        while (aux.getProx().getProx() != null) {
+            aux = aux.getProx();
+        }
+        aux.setProx(null);
+        ;
+    }
+
+    public void pegarPosicaoDado(int dado) {
+        int posicao = 0;
+        if (vazia()) {
+            return;
+        }
+        if (inicio.getDado() == dado) {
+            System.out.println("Posição: " + posicao + " Dado: " + dado);
+            return;
+        }
+        Nodo aux = inicio;
+        while (aux.getDado() != dado) {
+            posicao++;
+            aux = aux.getProx();
+        }
+        System.out.println("Posição: " + posicao + "Dado: " + dado);
+
+    }
+
     public void inserirFinal(int dado) {
         if (vazia()) {
             inserirInicio(dado);

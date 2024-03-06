@@ -276,3 +276,13 @@ Analise Assintodica
 ## Aula 28/02
 ### Lista Encadeada
 São uma fila de Nodos, onde a gente pega um nodo inicial e vai incrementando na esquerda, no inicio. Na hora de ler temos que criar uma variavél auxiliar para conseguir mover o incio depois. Na hora de deletar temos que pegar o aux e receber o próximo do pŕoximo elemento, para que ele consiga romper o vincula com o próximo e vincular com o prox do prox.
+
+## Aula 06/03/24
+
+### Escreva os seguintes métodos para a Lista Encadeada:
+
+1. Contar nodos da lista
+2. ~~Inserir no final~~
+3. Deletar o **primeiro** nodo da lista
+4. Deletar o **último** nodo da lista
+5. Procurar se um valor está ou não da nlista, caso sim, em qual posição.
