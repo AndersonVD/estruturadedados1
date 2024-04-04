@@ -1,4 +1,4 @@
-package listas_lineares;
+package exercicios.listas_lineares.ex02;
 
 public class ListaCircular {
     private Nodo inicio;
@@ -12,26 +12,8 @@ public class ListaCircular {
         return inicio;
     }
 
-    public void inserirOrdenado(int dado) {
-        Nodo novoNodo = new Nodo(dado);
-        if (inicio == null || dado <= inicio.getDado()) {
-            inserirInicio(dado); // Já ajusta inicio e fim se necessário
-        } else {
-            // Buscar posição de inserção
-            Nodo atual = inicio;
-            while (atual.getProx() != inicio && atual.getProx().getDado() < dado) {
-                atual = atual.getProx();
-            }
-            novoNodo.setProx(atual.getProx());
-            atual.setProx(novoNodo);
-            if (atual == fim) {
-                fim = novoNodo; // Atualiza o fim se inserido no final
-            }
-        }
-    }
-
-    public void inserirInicio(int dado) {
-        Nodo novoNodo = new Nodo(dado);
+    public void inserirInicio(Produto produto) {
+        Nodo novoNodo = new Nodo(produto);
         if (inicio == null) { // Caso a lista esteja vazia
             inicio = novoNodo;
             inicio.setProx(inicio);
@@ -49,19 +31,19 @@ public class ListaCircular {
             return lista;
         Nodo aux = inicio;
         do {
-            lista += aux.getDado() + "\n";
+            lista += aux.getProduto() + "\n";
             aux = aux.getProx();
         } while (aux != inicio);
         return lista;
     }
 
-    public void inserirFinal(int dado) {
+    public void inserirFinal(Produto produto) {
         if (inicio == null) {
-            inserirInicio(dado);
+            inserirInicio(produto);
             return;
         }
         Nodo aux = inicio;
-        Nodo novoNodo = new Nodo(dado);
+        Nodo novoNodo = new Nodo(produto);
         while (aux.getProx() != inicio) {
             aux = aux.getProx();
         }
@@ -69,7 +51,7 @@ public class ListaCircular {
         novoNodo.setProx(inicio);
     }
 
-    public int buscaValorCircular(int valor) {
+    public int buscaValorCircular(Produto produto) {
         int index = 0;
         if (inicio == null) {
             return -1;
@@ -77,7 +59,7 @@ public class ListaCircular {
         Nodo aux = inicio;
         do {
             index++;
-            if (aux.getDado() == valor) {
+            if (aux.getProduto() == produto) {
                 return index;
             }
             aux = aux.getProx();
@@ -85,11 +67,11 @@ public class ListaCircular {
         return -1;
     }
 
-    public void deleteComValor(int dado) {
+    public void deleteComValor(Produto produto) {
         if (inicio == null) {
             return;
         }
-        if (inicio.getDado() == dado) {
+        if (inicio.getProduto() == produto) {
             if (inicio == fim) {
                 inicio = null;
                 return;
@@ -102,7 +84,7 @@ public class ListaCircular {
 
         Nodo aux = inicio;
         do {
-            if (aux.getProx().getDado() == dado) {
+            if (aux.getProx().getProduto() == produto) {
                 aux.setProx(aux.getProx().getProx());
                 return;
             }

@@ -1,4 +1,4 @@
-package listas_lineares;
+package exercicios.listas_lineares.ex04;
 
 public class ListaEncadeada {
 

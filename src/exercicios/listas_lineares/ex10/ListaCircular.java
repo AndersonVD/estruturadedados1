@@ -1,4 +1,4 @@
-package listas_lineares;
+package exercicios.listas_lineares.ex10;
 
 public class ListaCircular {
     private Nodo inicio;
