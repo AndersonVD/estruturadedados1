@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "exercicios.restaurante.Main",
+            "projectName": "estruturadedados1_f84a3285"
+        },
+        {
+            "type": "java",
+            "name": "TestesNodo",
+            "request": "launch",
+            "mainClass": "listas_lineares.TestesNodo",
+            "projectName": "estruturadedados1_f84a3285"
+        },
+        {
+            "type": "java",
             "name": "ex04",
             "request": "launch",
             "mainClass": "exercicios.listas_lineares.ex04.ex04",
